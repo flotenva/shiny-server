@@ -5,7 +5,7 @@ set -e
 # From the relevant SHASUMS256.txt file at:
 # https://github.com/jcheng5/node-centos6/releases
 # The node-v{VERSION}-linux-x64.tar.xz checksum is the one we need.
-NODE_SHA256=d14471405cf91850d98e59bf4e60f02435d68dd82bc8cfb280b8a299b14d4943
+NODE_SHA256=51b301102984ff73a74894396b774d00259bb3bb8c1de7c82674713acec7a214
 
 cd $(dirname $0)
 cd ../..
@@ -33,8 +33,8 @@ verify_checksum () {
 }
 
 download_node () {
-  local NODE_FILENAME="node-${NODE_VERSION}-linux-x64.tar.xz"
-  local NODE_URL="https://github.com/jcheng5/node-centos6/releases/download/${NODE_VERSION}/${NODE_FILENAME}"
+  local NODE_FILENAME="node-${NODE_VERSION}-linux-arm64.tar.xz"
+  local NODE_URL="https://nodejs.org/dist/${NODE_VERSION}/${NODE_FILENAME}"
   local NODE_ARCHIVE_DEST="/tmp/${NODE_FILENAME}"
   echo "Downloading Node ${NODE_VERSION} from ${NODE_URL}"
 
